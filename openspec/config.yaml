@@ -1,0 +1,9 @@
+schema: spec-driven
+
+context: |
+  Shared planning store for the bulletin board application.
+  Code lives in two repos that implement the contracts specified here:
+  - bulletin-board-backend: Java 25, Spring Boot 4, Maven, H2 (REST API under /api/ads)
+  - bulletin-board-frontend: React 19, TypeScript, Vite (calls the REST API)
+  Specs in this store describe behaviour at the boundary between the two repos
+  (HTTP API shape, validation, errors). Implementation details belong in each code repo.
