@@ -7,3 +7,16 @@ context: |
   - bulletin-board-frontend: React 19, TypeScript, Vite (calls the REST API)
   Specs in this store describe behaviour at the boundary between the two repos
   (HTTP API shape, validation, errors). Implementation details belong in each code repo.
+
+rules:
+  proposal:
+    - 'Include a "Repos" section listing each affected repo, its local change name (<store-change>-<repo>) and its role.'
+  design:
+    - 'Include a "Clarifications" section for contract gaps found during implementation.'
+  specs:
+    - 'For every endpoint, state the precedence of errors (400 vs 401 vs 403 vs 404 vs 409) and the anonymous behavior.'
+    - 'State cookie and header behavior on every response that sets or clears them, including logout.'
+    - 'State what happens to paths outside the API (for example the H2 console) when a security layer is added.'
+  tasks:
+    - 'Only contract and coordination work, never per-repo implementation tasks.'
+    - 'Number groups consecutively from 1, and include a "Per-repo changes" group of "<repo>: <local change> archived" checkpoints.'
